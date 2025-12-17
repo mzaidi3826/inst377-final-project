@@ -2,7 +2,8 @@
     <head>
         <title>INST377 - Final Project</title>
         <link rel="stylesheet" href="inst377_final_stylesheet.css">
-        <script src="final_home.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="inst377_final_script.js" defer></script>
     </head>
 
     <body>
@@ -19,12 +20,24 @@
         <h1>Enter Your Email Below:</h1>
         
         <form id="emailForm">
-            <label for="email">Enter Email:</label>
-            <input type="email" id="email" required/>
+            <label for="email">Email Address:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@agency.gov"
+                required
+            />
             <button type="submit">Check Risk</button>
         </form>
 
-        <div id="result"></div>
-        
-    </body>
+      <section id="result" aria-live="polite"></section>
+      <canvas id="riskChart" width="400" height="200"></canvas>
+
+      <section>
+        <h3>Sample Emails</h3>
+        <ul id="sampleEmails"></ul>
+      </section>
+
+  </body>
 </html>

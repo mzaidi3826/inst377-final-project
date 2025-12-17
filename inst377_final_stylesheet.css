@@ -20,9 +20,9 @@ body {
     background-color: lightblue;
 }
 
-.header-footer {
+.header {
     color: white;
-    background-color: rgb(8, 178, 178);
+    background-color: darkslategrey;
     padding: 10px;
     margin: 10px;
     text-align: center;
@@ -32,43 +32,8 @@ body {
 .main {
     background-color: lightblue;
     color: white;
-    padding: 15px;
-    margin: 10px;
-    width: 60%;
-    float: left;
-    border: 3px solid black;
-}
-
-.main section {
-    background-color: darkslategrey;
-    padding: 10px;
+    padding: 2px;
+    margin: 20px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    overflow: auto;
-    position: relative;
-}
-
-.logo-link img {
-    width: 50px;
-    height: auto;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-}
-
-.aside {
-    background-color: darkslategrey;
-    color: white;
-    padding: 25px;
-    margin: 10px;
-    width: 20%;
-    float: right;
-    margin-bottom: 10px;
-    border: 3px solid black;
-}
-
-.aside:hover {
-    background-color: darkseagreen;
 }
