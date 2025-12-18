@@ -1,17 +1,22 @@
-// server.js
+import dotenv from "dotenv";
+dotenv.config(); // Only once, at the very top
+
 import express from "express";
-import checkEmailHandler from "./api/check-email.js"; // your handler
 import path from "path";
+import checkEmailHandler from "./api/inst377_check_email.js";
+import recentChecksHandler from "./api/recent_checks.js";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// Serve front-end files
+// Serve static files
 app.use(express.static(path.join(path.resolve(), "public")));
 
-// API endpoint
+// API endpoints
 app.get("/api/check-email", checkEmailHandler);
+app.get("/api/email-checks", recentChecksHandler);
 
+// Start server
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+    console.log(`Server running at http://localhost:${PORT}`);
 });

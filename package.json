@@ -1,0 +1,28 @@
+{
+  "name": "inst377-final-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "inst377_final_server.js",
+  "scripts": {
+    "start": "node inst377_final_server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzaidi3826/inst377-final-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/mzaidi3826/inst377-final-project/issues"
+  },
+  "homepage": "https://github.com/mzaidi3826/inst377-final-project#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.88.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2"
+  }
+}
