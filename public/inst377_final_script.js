@@ -51,7 +51,7 @@ function showToast(message, level) {
 // Load recent email checks (Supabase)
 async function loadRecentChecks() {
     try {
-        const response = await fetch("/api/email-checks");
+        const response = await fetch("/api/recent_checks");
         const data = await response.json();
         const list = document.getElementById("recentChecks");
         list.innerHTML = "";
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
         resultDiv.innerHTML = "Checking email risk...";
 
         try {
-            const response = await fetch(`/api/check-email?email=${encodeURIComponent(email)}`);
+            const response = await fetch(`/api/check_email?email=${encodeURIComponent(email)}`);
             const data = await response.json();
 
             if (data.error) {
