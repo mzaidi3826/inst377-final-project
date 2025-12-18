@@ -1,6 +1,5 @@
 let riskChart;
 
-// Render chart function (Chart.js)
 function renderChart(score) {
     const ctx = document.getElementById("riskChart").getContext("2d");
     const color =
@@ -34,7 +33,6 @@ function renderChart(score) {
     });
 }
 
-// Show Toastify notification
 function showToast(message, level) {
     const bgColor = level === "High" ? "#FF4C4C" :
                     level === "Medium" ? "#FFC107" : "#4CAF50";
@@ -48,7 +46,6 @@ function showToast(message, level) {
     }).showToast();
 }
 
-// Load recent email checks (Supabase)
 async function loadRecentChecks() {
     try {
         const response = await fetch("/api/recent_checks");
@@ -66,7 +63,6 @@ async function loadRecentChecks() {
     }
 }
 
-// Load sample emails
 async function loadSampleEmails() {
     try {
         const response = await fetch("/data/sample_emails.csv");
@@ -89,7 +85,6 @@ async function loadSampleEmails() {
     }
 }
 
-// Main DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
     loadSampleEmails();
     loadRecentChecks();
