@@ -36,7 +36,7 @@ export default async function handler(req, res) {
     const risk = calculateRisk(data);
 
     const { error: insertError } = await supabase.from("email_checks").insert([{
-      email: data.email,
+      email: email,
       risk_score: risk.score,
       risk_level: risk.level,
       reasons: risk.reasons,
