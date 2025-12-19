@@ -1,5 +1,5 @@
 body {
-    background-color: #e6f4f6;
+    background-color: lightblue;
     font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif; 
 }
@@ -68,11 +68,6 @@ body {
   padding: 10px;
   background: #fafafa;
   border-left: 4px solid #0077cc;
-}
-
-.sample-email {
-  cursor: pointer;
-  color: #0077cc;
 }
 
 .sample-email:hover {
