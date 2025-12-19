@@ -18,108 +18,35 @@
             <a href="inst377_final_help.html"><em><strong>Help</strong></em></a>
         </div>
 
-        <h1>About This Website</h1>
-
-        <section>
-            <h2>Project Overview</h2>
+          <section class="about-card">
+            <h2>What is the Email Risk Checker?</h2>
             <p>
-                The <strong>Email Risk Checker</strong> is a dynamic web application created for
-                the INST377: Dynamic Web Applications course. The goal of this project is to help
-                users understand how vulnerable an email address may be to fraud, abuse, or data
-                breaches by leveraging publicly available risk-analysis APIs.
+            The Email Risk Checker analyzes email addresses for potential fraud,
+            abuse, and deliverability issues using an external fraud-detection API
+            and a cloud-hosted database.
             </p>
         </section>
 
-        <section>
-            <h2>The Problem</h2>
-            <p>
-                Email accounts are a primary target for cyberattacks. Compromised email addresses
-                can lead to identity theft, phishing attacks, financial fraud, and unauthorized
-                access to sensitive systems. Many individuals and organizations are unaware of
-                how exposed their email addresses may be until a breach has already occurred.
-            </p>
-        </section>
+        <section class="about-grid">
+            <div class="about-box">
+            <h3>🔍 Risk Analysis</h3>
+            <p>Scores emails from 0–100 based on fraud indicators.</p>
+            </div>
 
-        <section>
-            <h2>Who This Is For</h2>
-            <p>
-                This project is designed around an <em>imaginary government organization</em>
-                called the <strong>U.S. Department of Buses</strong>, which relies heavily on email
-                for daily internal and external communication. The primary stakeholders include:
-            </p>
-            <ul>
-                <li>Employees who want to know if their email accounts are at risk</li>
-                <li>IT staff who need to identify vulnerable accounts proactively</li>
-                <li>Executives who need data-driven insights to support cybersecurity decisions</li>
-            </ul>
-        </section>
+            <div class="about-box">
+            <h3>☁️ Cloud Storage</h3>
+            <p>Results are stored securely in Supabase for recent history.</p>
+            </div>
 
-        <section>
-            <h2>How It Works</h2>
-            <p>
-                Users enter an email address on the home page. The application sends the email
-                to a custom backend API, which then queries the
-                <strong>IPQualityScore Email Risk API</strong>. The response is analyzed and
-                transformed into a simplified risk score and classification:
-            </p>
-            <ul>
-                <li><strong>Low Risk</strong> – Minimal signs of abuse or fraud</li>
-                <li><strong>Medium Risk</strong> – Some indicators of suspicious behavior</li>
-                <li><strong>High Risk</strong> – Strong evidence of fraud, abuse, or misuse</li>
-            </ul>
-            <p>
-                The results are displayed in both text form and as a visual chart to make the
-                information easy to understand.
-            </p>
-        </section>
-
-        <section class="about-section">
-            <h2>How Risk Is Calculated</h2>
-            <p>
-                The Email Risk Checker evaluates multiple indicators commonly used in fraud
-                detection systems. The chart below shows how different signals contribute
-                to the final risk score.
-            </p>
-
-            <div class="chart-container">
-                <canvas id="riskBreakdownChart"></canvas>
+            <div class="about-box">
+            <h3>📊 Visual Insights</h3>
+            <p>Charts and color indicators make results easy to understand.</p>
             </div>
         </section>
 
-
-        <section>
-            <h2>Data & APIs Used</h2>
-            <ul>
-                <li>
-                <strong>IPQualityScore Email API</strong> – Used to analyze email addresses for
-                fraud risk, abuse history, and deliverability.
-                </li>
-                <li>
-                <strong>Public CSV Data</strong> – Sample government-style email addresses are
-                loaded from a CSV file for testing and demonstration purposes.
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Technology Stack</h2>
-            <ul>
-                <li>HTML & CSS for structure and styling</li>
-                <li>JavaScript for dynamic behavior and API interaction</li>
-                <li>Node.js & Express for the backend server</li>
-                <li>Chart.js for data visualization</li>
-                <li>Supabase (PostgreSQL) for data storage</li>
-                <li>Vercel for deployment</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Project Goal</h2>
-            <p>
-                The goal of this application is not to definitively label an email address as
-                “safe” or “unsafe,” but to provide users with actionable information that can help
-                them make informed decisions about cybersecurity and risk prevention.
-            </p>
+        <section class="about-chart">
+            <h2>How Risk Scores Are Interpreted</h2>
+            <canvas id="aboutChart"></canvas>
         </section>
         
     </body>

@@ -1,40 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const ctx = document
-        .getElementById("riskBreakdownChart")
-        .getContext("2d");
+  const ctx = document.getElementById("aboutChart");
 
-    new Chart(ctx, {
-        type: "doughnut",
-        data: {
-            labels: [
-                "Fraud Score",
-                "Disposable Email",
-                "Abuse History",
-                "Deliverability",
-                "Domain Reputation"
-            ],
-            datasets: [{
-                data: [40, 25, 20, 10, 15],
-                backgroundColor: [
-                    "#ff6384",
-                    "#ffcd56",
-                    "#ff9f40",
-                    "#4bc0c0",
-                    "#36a2eb"
-                ]
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: "bottom"
-                },
-                title: {
-                    display: true,
-                    text: "Email Risk Factor Contribution (%)"
-                }
-            }
-        }
-    });
+  new Chart(ctx, {
+    type: "doughnut",
+    data: {
+      labels: ["Low Risk", "Medium Risk", "High Risk"],
+      datasets: [{
+        data: [60, 25, 15],
+        backgroundColor: [
+          "#4CAF50",
+          "#FFC107",
+          "#F44336"
+        ]
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: "bottom" }
+      }
+    }
+  });
 });
