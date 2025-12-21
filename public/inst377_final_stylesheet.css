@@ -71,6 +71,10 @@ body {
   border-left: 4px solid #0077cc;
 }
 
+.sample-email {
+  cursor: pointer;
+}
+
 .sample-email:hover {
   text-decoration: underline;
 }
