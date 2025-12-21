@@ -29,4 +29,4 @@ Mobile support works on:
 DELEVOPER MANUAL 
 
 The full Developer Manual is available here:
-**[Developer Manual](./docs/DEVELOPER_MANUAL.md)**
+**[Developer Manual](./docs/developer_manual.md)**

@@ -23,7 +23,7 @@ Database
 - Supabase (PostgreSQL)
 
 External API
-- IPQualityScore Email Fraud API
+- IPQualityScore (Email Fraud API)
 
 INSTALLATION & DEPENDENCIES
 
